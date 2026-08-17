@@ -23,12 +23,12 @@ If your AI coding agent supports installing Codex skills from GitHub, send this 
 Install this Codex skill: https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git
 ```
 
-The repository contains `SKILL.md` at its root. A compatible agent should install it into the personal Codex skills directory as `s4hana-outbound-connetions-discovery`. The skill should become available on the next turn.
+The repository contains `SKILL.md` at its root. A compatible agent should install it into the personal Codex skills directory as `s4hana-outbound-connections-discovery`. The skill should become available on the next turn.
 
 If the agent needs more explicit instructions, use:
 
 ```text
-Install the Codex skill from https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git. The SKILL.md file is at the repository root. Install it as s4hana-outbound-connetions-discovery in my personal Codex skills directory. Do not execute the skill yet; tell me when it is available.
+Install the Codex skill from https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git. The SKILL.md file is at the repository root. Install it as s4hana-outbound-connections-discovery in my personal Codex skills directory. Do not execute the skill yet; tell me when it is available.
 ```
 
 ### Install manually with Git
@@ -37,13 +37,13 @@ PowerShell:
 
 ```powershell
 $codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
-git clone https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git (Join-Path $codexRoot 'skills\s4hana-outbound-connetions-discovery')
+git clone https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git (Join-Path $codexRoot 'skills\s4hana-outbound-connections-discovery')
 ```
 
 macOS or Linux:
 
 ```bash
-git clone https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git "${CODEX_HOME:-$HOME/.codex}/skills/s4hana-outbound-connetions-discovery"
+git clone https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git "${CODEX_HOME:-$HOME/.codex}/skills/s4hana-outbound-connections-discovery"
 ```
 
 If that destination already exists, remove or rename the existing installation only after preserving any local changes. After installation, start a new Codex turn. If the skill is not detected, restart the Codex client.
@@ -53,25 +53,25 @@ If that destination already exists, remove or rename the existing installation o
 Complete inventory:
 
 ```text
-Use $s4hana-outbound-connetions-discovery to inventory all outbound HTTP and HTTPS logical ports in SOAMANAGER and all SM59 HTTP destinations.
+Use $s4hana-outbound-connections-discovery to inventory all outbound HTTP and HTTPS logical ports in SOAMANAGER and all SM59 HTTP destinations.
 ```
 
 Filter by any domain:
 
 ```text
-Use $s4hana-outbound-connetions-discovery to find SOAMANAGER and SM59 endpoints whose target host belongs to example.com.
+Use $s4hana-outbound-connections-discovery to find SOAMANAGER and SM59 endpoints whose target host belongs to example.com.
 ```
 
 Filter by integration or keyword:
 
 ```text
-Use $s4hana-outbound-connetions-discovery to list outbound connections related to SuccessFactors. Separate exact host matches from names or paths that merely contain the keyword.
+Use $s4hana-outbound-connections-discovery to list outbound connections related to SuccessFactors. Separate exact host matches from names or paths that merely contain the keyword.
 ```
 
 Target a connected system:
 
 ```text
-Use $s4hana-outbound-connetions-discovery on system <SYSTEM_ID>. Include active and inactive logical ports, reconstructed URLs, and SM59 type G/H destinations.
+Use $s4hana-outbound-connections-discovery on system <SYSTEM_ID>. Include active and inactive logical ports, reconstructed URLs, and SM59 type G/H destinations.
 ```
 
 ## Expected output

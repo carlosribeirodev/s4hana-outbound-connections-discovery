@@ -1,5 +1,5 @@
 ---
-name: s4hana-outbound-connetions-discovery
+name: s4hana-outbound-connections-discovery
 description: Discover and report outbound HTTP/HTTPS connections in SAP S/4HANA by reading SOAMANAGER consumer logical ports and SM59 HTTP destinations with read-only ABAP SQL MCP tools. Use for complete outbound endpoint inventories, arbitrary domain or host searches, integration audits, active/inactive logical-port analysis, SM59 type G/H checks, and DDIC-based discovery of the release-specific persistence tables.
 ---
 
