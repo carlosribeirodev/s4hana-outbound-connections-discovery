@@ -13,6 +13,41 @@ The skill is not specific to Ariba. It can process every endpoint or filter by a
 - SAP authorization to read DDIC metadata and SOAP/RFC configuration tables.
 - Optional internet access for official SAP Help verification.
 
+## Install the skill
+
+### Ask an AI coding agent to install it
+
+If your AI coding agent supports installing Codex skills from GitHub, send this prompt:
+
+```text
+Install this Codex skill: https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git
+```
+
+The repository contains `SKILL.md` at its root. A compatible agent should install it into the personal Codex skills directory as `s4hana-outbound-connetions-discovery`. The skill should become available on the next turn.
+
+If the agent needs more explicit instructions, use:
+
+```text
+Install the Codex skill from https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git. The SKILL.md file is at the repository root. Install it as s4hana-outbound-connetions-discovery in my personal Codex skills directory. Do not execute the skill yet; tell me when it is available.
+```
+
+### Install manually with Git
+
+PowerShell:
+
+```powershell
+$codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
+git clone https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git (Join-Path $codexRoot 'skills\s4hana-outbound-connetions-discovery')
+```
+
+macOS or Linux:
+
+```bash
+git clone https://github.com/carlosribeirodev/s4hana-outbound-connections-discovery.git "${CODEX_HOME:-$HOME/.codex}/skills/s4hana-outbound-connetions-discovery"
+```
+
+If that destination already exists, remove or rename the existing installation only after preserving any local changes. After installation, start a new Codex turn. If the skill is not detected, restart the Codex client.
+
 ## Execute the skill
 
 Complete inventory:
